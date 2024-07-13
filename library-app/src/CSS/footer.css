@@ -1,0 +1,10 @@
+footer {
+  background-color: #beebf6;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+}
+
+footer h2 {
+  text-align: center;
+}

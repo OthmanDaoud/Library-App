@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: large;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #beebf6;
+  margin: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card h2,
+h4,
+p {
+  text-align: center;
+  margin: 10px;
+  width: 15rem;
+}

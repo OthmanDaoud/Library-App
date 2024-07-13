@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
-import "./App.css";
 import { useState } from "react";
+import "../CSS/home.css";
 
-function App() {
+function Home() {
+  const user = JSON.parse(localStorage.getItem("userData"));
   const [books, setBooks] = useState([
     {
       id: 1,
@@ -67,17 +67,20 @@ function App() {
   ]);
 
   return (
-    <div className="container">
-      {books.map((book) => (
-        <div className="card">
-          <p>{book.id}</p>
-          <h2>{book.title}</h2>
-          <h4>{book.author}</h4>
-          <p>{book.isbn}</p>
-        </div>
-      ))}
-    </div>
+    <>
+      <h1>Wlecome {user ? user.name : <></>}</h1>
+      <div className="container">
+        {books.map((book) => (
+          <div className="card">
+            <p>{book.id}</p>
+            <h2>{book.title}</h2>
+            <h4>{book.author}</h4>
+            <p>{book.isbn}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 
-export default App;
+export default Home;
